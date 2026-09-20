@@ -458,12 +458,17 @@ for (int i = 0; i < 16; i++) {
 
 - พิสูจน์ว่ารูปแบบของบิต `1` ตรงกับรูปร่างของตัวอักษร `'H'` บนหน้าจอ OLED จริงหรือไม่!
 
-| Bit / Y | Col 30 | Col 31 | Col 32 | Col 33 | Col 34 | Feature Description |
+| Pixel Row | Col 0 | Col 1 | Col 2 | Col 3 | Col 4 | Feature Description |
 | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Bit 4 ($y=4$)** | █ | . | . | . | █ | Left & Right Vertical Stems |
-| **Bit 5 ($y=5$)** | █ | . | . | . | █ | Left & Right Vertical Stems |
-| **Bit 6 ($y=6$)** | █ | . | . | . | █ | Left & Right Vertical Stems |
-| **Bit 7 ($y=7$)** | █ | █ | █ | █ | █ | Horizontal Crossbar |
+| **Row 0 (Bit 0)** | █ | . | . | . | █ | Top Left & Right Tips |
+| **Row 1 (Bit 1)** | █ | . | . | . | █ | Upper Left & Right Stems |
+| **Row 2 (Bit 2)** | █ | . | . | . | █ | Upper Left & Right Stems |
+| **Row 3 (Bit 3)** | █ | █ | █ | █ | █ | **Horizontal Center Bar** (คานเชื่อมกลาง) |
+| **Row 4 (Bit 4)** | █ | . | . | . | █ | Lower Left & Right Stems |
+| **Row 5 (Bit 5)** | █ | . | . | . | █ | Lower Left & Right Stems |
+| **Row 6 (Bit 6)** | █ | . | . | . | █ | Bottom Left & Right Tips |
+
+---
 
 ### Character 'E' (Columns 36–40)
 
