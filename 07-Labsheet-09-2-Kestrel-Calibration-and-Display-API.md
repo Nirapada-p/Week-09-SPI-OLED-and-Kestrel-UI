@@ -373,6 +373,9 @@ Server: Kestrel
    ```
    * **ผลที่คาดหวัง:** เซิร์ฟเวอร์ต้องตอบกลับด้วย **`400 Bad Request`** พร้อมข้อความเตือน `"RawMax ต้องมีค่ามากกว่า RawMin เสมอ!"` โดยที่เซิร์ฟเวอร์ Kestrel **ไม่ล่ม (No Server Crash)**!
 
+
+<img width="1377" height="256" alt="image" src="https://github.com/user-attachments/assets/67509f7a-0944-486c-a2bd-ea40c7a0a148" />
+
 2. **ทดสอบส่งข้อความว่างเปล่า:**
    ```powershell
    curl.exe -i -X POST http://localhost:5117/api/oled/message `
@@ -380,6 +383,9 @@ Server: Kestrel
      -d '{"message":""}'
    ```
    * **ผลที่คาดหวัง:** ได้รับ **`400 Bad Request`** แจ้งว่าข้อความต้องไม่ว่างเปล่า
+
+<img width="1390" height="243" alt="image" src="https://github.com/user-attachments/assets/78c3873d-586a-483d-94f3-c563801102d0" />
+
 
 ---
 
