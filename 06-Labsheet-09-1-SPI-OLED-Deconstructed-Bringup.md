@@ -436,7 +436,43 @@ for (int i = 0; i < 16; i++) {
 ### กิจกรรมนิติวิทยาศาสตร์ 1.2 Bit-to-Pixel Forensic Reconstruction
 ให้นักศึกษานำค่า Binary ของไบต์จาก Serial Monitor มาเขียนลงในตารางรายงานผลการทดลอง
 - ถอดรหัสว่าในแต่ละคอลัมน์ บิตใดเป็น `1` บ้าง
+
+| Byte / Col | Hex | Binary (`Bit 7` → `Bit 0`) | Active Bits | $y$ Pixel Position | Structure Analysis |
+| :---: | :---: | :---: | :---: | :---: | :--- |
+| **Byte[30] (Col 30)** | `0xF0` | `1111 0000` | 7, 6, 5, 4 | $y = 7, 6, 5, 4$ | Left Vertical Stem of **'H'** |
+| **Byte[31] (Col 31)** | `0x80` | `1000 0000` | 7 | $y = 7$ | Middle Crossbar of **'H'** |
+| **Byte[32] (Col 32)** | `0x80` | `1000 0000` | 7 | $y = 7$ | Middle Crossbar of **'H'** |
+| **Byte[33] (Col 33)** | `0x80` | `1000 0000` | 7 | $y = 7$ | Middle Crossbar of **'H'** |
+| **Byte[34] (Col 34)** | `0xF0` | `1111 0000` | 7, 6, 5, 4 | $y = 7, 6, 5, 4$ | Right Vertical Stem of **'H'** |
+| **Byte[35] (Col 35)** | `0x00` | `0000 0000` | - | - | Character Spacing |
+| **Byte[36] (Col 36)** | `0xF0` | `1111 0000` | 7, 6, 5, 4 | $y = 7, 6, 5, 4$ | Left Spine of **'E'** |
+| **Byte[37] (Col 37)** | `0x90` | `1001 0000` | 7, 4 | $y = 7, 4$ | Top Bar ($y=4$) & Mid Bar ($y=7$) |
+| **Byte[38] (Col 38)** | `0x90` | `1001 0000` | 7, 4 | $y = 7, 4$ | Top Bar ($y=4$) & Mid Bar ($y=7$) |
+| **Byte[39] (Col 39)** | `0x90` | `1001 0000` | 7, 4 | $y = 7, 4$ | Top Bar ($y=4$) & Mid Bar ($y=7$) |
+| **Byte[40] (Col 40)** | `0x10` | `0001 0000` | 4 | $y = 4$ | Top Bar End |
+| **Byte[41] (Col 41)** | `0x00` | `0000 0000` | - | - | Character Spacing |
+| **Byte[42] (Col 42)** | `0xF0` | `1111 0000` | 7, 6, 5, 4 | $y = 7, 6, 5, 4$ | Left Vertical Stem of **'L'** |
+| **Byte[43] (Col 43)** | `0x00` | `0000 0000` | - | - | Spacing / Page 1 continuation |
+| **Byte[44] (Col 44)** | `0x00` | `0000 0000` | - | - | Spacing / Page 1 continuation |
+| **Byte[45] (Col 45)** | `0x00` | `0000 0000` | - | - | Spacing / Page 1 continuation |
+
 - พิสูจน์ว่ารูปแบบของบิต `1` ตรงกับรูปร่างของตัวอักษร `'H'` บนหน้าจอ OLED จริงหรือไม่!
+
+| Bit / Y | Col 30 | Col 31 | Col 32 | Col 33 | Col 34 | Feature Description |
+| :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Bit 4 ($y=4$)** | █ | . | . | . | █ | Left & Right Vertical Stems |
+| **Bit 5 ($y=5$)** | █ | . | . | . | █ | Left & Right Vertical Stems |
+| **Bit 6 ($y=6$)** | █ | . | . | . | █ | Left & Right Vertical Stems |
+| **Bit 7 ($y=7$)** | █ | █ | █ | █ | █ | Horizontal Crossbar |
+
+### Character 'E' (Columns 36–40)
+
+| Bit / Y | Col 36 | Col 37 | Col 38 | Col 39 | Col 40 | Feature Description |
+| :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Bit 4 ($y=4$)** | █ | █ | █ | █ | █ | Top Bar |
+| **Bit 5 ($y=5$)** | █ | . | . | . | . | Left Spine |
+| **Bit 6 ($y=6$)** | █ | . | . | . | . | Left Spine |
+| **Bit 7 ($y=7$)** | █ | █ | █ | █ | . | Middle Bar |
 
 ---
 
