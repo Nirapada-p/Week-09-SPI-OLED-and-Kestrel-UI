@@ -225,6 +225,9 @@ app.Run();
 8. สังเกต Raw HTTP Response Headers
 
 
+<img width="1917" height="736" alt="image" src="https://github.com/user-attachments/assets/a69fbef6-a977-4b4a-b787-3705b063a89f" />
+
+
 ---
 
 ## 4. ขั้นตอนการตรวจสอบเชิงนิติวิทยาศาสตร์ (HTTP Payload Forensics)
