@@ -91,6 +91,7 @@ dotnet run
 
 ถ้าไม่สามารถรันได้ ให้ตรวจสอบว่าได้ทำตามขั้นตอนที่ 1-7 อย่างถูกต้องหรือไม่
 
+<img width="557" height="210" alt="image" src="https://github.com/user-attachments/assets/7c9eeac8-a6f8-49e8-aaf8-5a8bd0aa0cf8" />
 
 
 ### กิจกรรมที่ 2.1: การสร้างโมเดลและบริการปรับเทียบ (Calibration Service)
