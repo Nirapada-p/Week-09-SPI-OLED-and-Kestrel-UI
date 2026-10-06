@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ESP32.Kestrel.Webserver.props" />
+</Project>

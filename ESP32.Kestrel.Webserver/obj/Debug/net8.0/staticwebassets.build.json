@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mYwJislt2/PLtKRAvrXxI7i+RCODIbEIVYyzOm/t1+E=",
+  "Source": "ESP32.Kestrel.Webserver",
+  "BasePath": "_content/ESP32.Kestrel.Webserver",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
