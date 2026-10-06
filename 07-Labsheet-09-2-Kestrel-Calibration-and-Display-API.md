@@ -91,6 +91,7 @@ dotnet run
 
 ถ้าไม่สามารถรันได้ ให้ตรวจสอบว่าได้ทำตามขั้นตอนที่ 1-7 อย่างถูกต้องหรือไม่
 
+<img width="557" height="210" alt="image" src="https://github.com/user-attachments/assets/7c9eeac8-a6f8-49e8-aaf8-5a8bd0aa0cf8" />
 
 
 ### กิจกรรมที่ 2.1: การสร้างโมเดลและบริการปรับเทียบ (Calibration Service)
@@ -222,6 +223,9 @@ app.Run();
 6. เลือกแท็บ Network
 7. กด F5 เพื่อ Refresh หน้าเว็บ
 8. สังเกต Raw HTTP Response Headers
+
+
+<img width="1917" height="736" alt="image" src="https://github.com/user-attachments/assets/a69fbef6-a977-4b4a-b787-3705b063a89f" />
 
 
 ---
@@ -369,6 +373,9 @@ Server: Kestrel
    ```
    * **ผลที่คาดหวัง:** เซิร์ฟเวอร์ต้องตอบกลับด้วย **`400 Bad Request`** พร้อมข้อความเตือน `"RawMax ต้องมีค่ามากกว่า RawMin เสมอ!"` โดยที่เซิร์ฟเวอร์ Kestrel **ไม่ล่ม (No Server Crash)**!
 
+
+<img width="1377" height="256" alt="image" src="https://github.com/user-attachments/assets/67509f7a-0944-486c-a2bd-ea40c7a0a148" />
+
 2. **ทดสอบส่งข้อความว่างเปล่า:**
    ```powershell
    curl.exe -i -X POST http://localhost:5117/api/oled/message `
@@ -377,12 +384,23 @@ Server: Kestrel
    ```
    * **ผลที่คาดหวัง:** ได้รับ **`400 Bad Request`** แจ้งว่าข้อความต้องไม่ว่างเปล่า
 
+<img width="1390" height="243" alt="image" src="https://github.com/user-attachments/assets/78c3873d-586a-483d-94f3-c563801102d0" />
+
+
 ---
 
 ## 5. คำถามท้ายการทดลองเพื่อการประเมินผล
 1. เหตุใดการคำนวณสเกลเซนเซอร์จึงควรทำที่ฝั่ง Kestrel Server แทนที่จะคำนวณบนไมโครคอนโทรลเลอร์ ESP32 ตั้งแต่แรก?
+```
+เพื่อลดภาระการประมวลผลของ ESP32 และสามารถปรับสูตรหรือช่วงการแปลงค่าได้จากฝั่งเซิร์ฟเวอร์โดยไม่ต้องแก้ Firmware
+```
 2. จากการทำ HTTP Forensics หากไม่มีการตรวจสอบเงื่อนไข `RawMax <= RawMin` ในโค้ด จะเกิด Exception ชนิดใดขึ้นในภาษา C# และส่งผลต่อการทำงานของเซิร์ฟเวอร์อย่างไร?
+```
+เกิด ArgumentException จากการกำหนดช่วงค่าไม่ถูกต้อง ทำให้ Request ล้มเหลวและอาจทำให้การประมวลผลของ Server หยุดหากไม่มีการจัดการ Exception
+```
 3. อธิบายสาเหตุทางเทคนิคว่าทำไมคำขอ HTTP POST ที่ไม่มี Header `Content-Type: application/json` จึงถูกปฏิเสธด้วยรหัสสถานะ `415 Unsupported Media Type`?
-
+```
+Server คาดหวังข้อมูลในรูปแบบ JSON แต่ Request ไม่ได้ระบุชนิดข้อมูลทำให้ Server ไม่สามารถเลือกตัวแปลงข้อมูลJSON Formatterที่ถูกต้อง จึงตอบกลับ 415 Unsupported Media Type
+```
 
 
