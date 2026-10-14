@@ -763,6 +763,17 @@ dotnet run
    - ภายในเวลาประมาณ 1.5 วินาที หน้าจอ OLED จะต้องดีดกลับไปเป็น `EDGE: LOCAL EDGE` โดยอัตโนมัติ
    - เมื่อรัน `dotnet run` ใหม่อีกครั้ง จอ OLED จะต้องกลับมาเป็น `CLOUD: READY` โดยที่เฟิร์มแวร์ ESP32 ไม่ค้างหรือไม่ต้องกดปุ่มรีเซ็ตฮาร์ดแวร์เลย
 
+
+<img width="1171" height="458" alt="image" src="https://github.com/user-attachments/assets/5da99e7f-b8c9-40a5-a5ed-1ee9c69568ca" />
+
+
+<img width="3024" height="4032" alt="Image (8)" src="https://github.com/user-attachments/assets/814dad6d-dacd-4f4b-9ac4-74e068e3a59e" />
+
+
+<img width="3024" height="4032" alt="Image (9)" src="https://github.com/user-attachments/assets/a8c1d79a-bb32-4fa1-a14a-d9fde4131ff9" />
+
+
+
 ---
 
 ### กิจกรรมที่ 3.3 การสร้างเว็บแดชบอร์ด Real-Time SVG Bar Gauge
