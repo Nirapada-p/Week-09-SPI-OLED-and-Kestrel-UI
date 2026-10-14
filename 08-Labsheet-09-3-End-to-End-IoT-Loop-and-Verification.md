@@ -895,6 +895,17 @@ dotnet run
    - พิมพ์ข้อความภาษาอังกฤษ เช่น `"TEST OK"` หรือ `"IoT ALERT"` แล้วกดปุ่ม **ส่งข้อความ**
    - สังเกตที่ **Zone 3 ของหน้าจอ OLED จริง** ข้อความจะต้องเปลี่ยนเป็นคำที่พิมพ์จากหน้าเว็บทันที
 
+
+
+<img width="1917" height="650" alt="image" src="https://github.com/user-attachments/assets/fec1cd5e-709d-4457-9c92-31f3765f45b8" />
+
+
+<img width="3024" height="4032" alt="Image (10)" src="https://github.com/user-attachments/assets/94c6ceb8-41e4-49a7-a541-08811918157c" />
+
+
+<img width="3024" height="4032" alt="Image (11)" src="https://github.com/user-attachments/assets/b9e5de2b-30b5-490d-8dc1-9c81a7ee0bb3" />
+
+
 ---
 
 ## 4. การตรวจวัดความหน่วงเวลาและการพิสูจน์หลักฐาน (End-to-End Latency Forensics)
