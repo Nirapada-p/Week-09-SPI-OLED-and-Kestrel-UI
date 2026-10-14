@@ -1,4 +1,4 @@
-# ใบงานการทดลองที่ 9.3 (Lab 9.3)
+<img width="3024" height="4032" alt="Image (7)" src="https://github.com/user-attachments/assets/5c082616-20d3-4015-9145-1c26ff103e74" /># ใบงานการทดลองที่ 9.3 (Lab 9.3)
 ### การรวมระบบวงปิดแบบครบวงจร การตรวจสอบความสอดคล้องของข้อมูลและเวลาหน่วง (End-to-End Closed-Loop IoT, Co-Verification & Latency Forensics)
 
 >[!NOTE] **คำชี้แจง**
@@ -500,6 +500,10 @@ python -m esptool --chip esp32  -p COM24 -b 460800 --before default_reset --afte
 
 
 <img width="1917" height="985" alt="image" src="https://github.com/user-attachments/assets/ee4a2249-3bc9-48c7-847f-170ba8ec21c6" />
+
+
+<img width="3024" height="4032" alt="Image (7)" src="https://github.com/user-attachments/assets/5ec5b94d-2a58-4b18-8db0-275cb92328a1" />
+
 
 
 ---
