@@ -1,4 +1,4 @@
-<img width="3024" height="4032" alt="Image (7)" src="https://github.com/user-attachments/assets/5c082616-20d3-4015-9145-1c26ff103e74" /># ใบงานการทดลองที่ 9.3 (Lab 9.3)
+# ใบงานการทดลองที่ 9.3 (Lab 9.3)
 ### การรวมระบบวงปิดแบบครบวงจร การตรวจสอบความสอดคล้องของข้อมูลและเวลาหน่วง (End-to-End Closed-Loop IoT, Co-Verification & Latency Forensics)
 
 >[!NOTE] **คำชี้แจง**
