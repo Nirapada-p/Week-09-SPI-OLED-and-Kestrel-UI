@@ -498,6 +498,10 @@ python -m esptool --chip esp32  -p COM24 -b 460800 --before default_reset --afte
    - โซนที่ 3 (Footer) ต้องแสดงข้อความ `EDGE: LOCAL EDGE` เนื่องจากยังไม่ได้เชื่อมต่อ Kestrel
 1. **หากผ่านจุดนี้** ให้กด `Ctrl + ]` เพื่อออกจาก Serial Monitor เพื่อคืนพอร์ต COM ให้กับ Kestrel ในกิจกรรมถัดไป!
 
+
+<img width="1917" height="985" alt="image" src="https://github.com/user-attachments/assets/ee4a2249-3bc9-48c7-847f-170ba8ec21c6" />
+
+
 ---
 
 ### กิจกรรมที่ 3.2 การขยายขีดความสามารถ Kestrel Web Server (Kestrel Serial Bridge)
